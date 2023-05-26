@@ -54,16 +54,13 @@ const FirebaseLogin = ({ ...others }) => {
     const handleMouseDownPassword = (event) => {
         event.preventDefault();
     };
-    const signInHandle = () => {
-        navigate('/dashboard/default');
-    };
 
     return (
         <>
             <Formik
                 initialValues={{
-                    email: 'info@codedthemes.com',
-                    password: '123456',
+                    email: '',
+                    password: '',
                     submit: null
                 }}
                 validationSchema={Yup.object().shape({
@@ -76,6 +73,8 @@ const FirebaseLogin = ({ ...others }) => {
                             setStatus({ success: true });
                             setSubmitting(false);
                         }
+                        console.log(values);
+                        navigate('/dashboard/default');
                     } catch (err) {
                         console.error(err);
                         if (scriptedRef.current) {
@@ -174,7 +173,6 @@ const FirebaseLogin = ({ ...others }) => {
                                     type="submit"
                                     variant="contained"
                                     color="secondary"
-                                    onClick={signInHandle}
                                 >
                                     Sign in
                                 </Button>
