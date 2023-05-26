@@ -32,7 +32,7 @@ const Register = () => {
                                             <Logo />
                                         </Link>
                                     </Grid>
-                                    <Grid item xs={12}>
+                                    {/* <Grid item xs={12}>
                                         <Grid
                                             container
                                             direction={matchDownSM ? 'column-reverse' : 'row'}
@@ -58,7 +58,7 @@ const Register = () => {
                                                 </Stack>
                                             </Grid>
                                         </Grid>
-                                    </Grid>
+                                    </Grid> */}
                                     <Grid item xs={12}>
                                         <AuthRegister />
                                     </Grid>
